@@ -39,8 +39,12 @@ proyecto-titanic/
 ├── main.py                 # Script principal con el modelo
 ├── README.md              # Documentación del proyecto
 ├── requeriments.txt       # Dependencias del proyecto
-└── data/
-    └── DataSet_Titanic.csv # Dataset del Titanic
+├── data/
+│   └── DataSet_Titanic.csv # Dataset del Titanic
+└── graph/
+    ├── Árbol de Desición.png           # Visualización del árbol de decisión
+    ├── Matriz de Confusión.png         # Matriz de confusión del modelo
+    └── Importancia de las Variables.png # Gráfico de importancia de características
 ```
 
 ## Funcionalidades Principales
@@ -94,6 +98,44 @@ El modelo genera:
 
 3. **Visualización del Árbol**: Muestra las reglas de decisión aprendidas por el modelo
 4. **Importancia de Variables**: Ranking de qué características son más influyentes en la predicción
+
+## Gráficas Generadas
+
+El proyecto genera automáticamente las siguientes visualizaciones:
+
+### 1. Árbol de Decisión
+![Árbol de Decisión](graph/Árbol%20de%20Desición.png)
+
+Esta gráfica muestra la estructura completa del árbol de decisión entrenado, incluyendo:
+- **Nodos de decisión**: Con las condiciones de separación
+- **Valores de Gini**: Medida de impureza en cada nodo
+- **Muestras**: Número de observaciones en cada nodo
+- **Distribución de clases**: Proporción de supervivientes vs no supervivientes
+- **Colores**: Intensidad indica la pureza de la clasificación
+
+### 2. Matriz de Confusión
+![Matriz de Confusión](graph/Matriz%20de%20Confusión.png)
+
+Visualización de la matriz de confusión que muestra:
+- **Eje X**: Predicciones del modelo
+- **Eje Y**: Valores reales
+- **Valores numéricos**: Cantidad de casos en cada categoría
+- **Colores**: Intensidad representa la cantidad de casos
+
+### 3. Importancia de Variables
+![Importancia de Variables](graph/Importancia%20de%20las%20Variables.png)
+
+Gráfico de barras que muestra la importancia relativa de cada característica:
+- **Eje X**: Variables del dataset (Clase, Género, Edad, HermEsp, PadHij)
+- **Eje Y**: Valor de importancia (0-1)
+- **Interpretación**: Variables con mayor altura tienen más influencia en las predicciones
+
+### Análisis de las Gráficas
+
+Las visualizaciones revelan patrones importantes:
+- El **árbol de decisión** muestra las reglas de clasificación más importantes
+- La **matriz de confusión** permite evaluar el rendimiento del modelo
+- La **importancia de variables** identifica qué características son más predictivas
 
 ## Interpretación de Resultados
 
